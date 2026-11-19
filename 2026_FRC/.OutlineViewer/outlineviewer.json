@@ -1,0 +1,17 @@
+{
+  "NetworkTables Settings": {
+    "mode": "Client (NT4)",
+    "serverTeam": "8805"
+  },
+  "transitory": {
+    "SmartDashboard": {
+      "open": true
+    },
+    "limelight": {
+      "double[]##v_/limelight/robot_orientation_set": {
+        "open": true
+      },
+      "open": true
+    }
+  }
+}

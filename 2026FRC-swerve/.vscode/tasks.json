@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "檢查待設定參數",
+      "type": "process",
+      "command": "python3",
+      "args": [
+        "${workspaceFolder}/tools/check_config.py"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": {
+        "owner": "robot-configuration",
+        "source": "機器人待設定",
+        "fileLocation": "absolute",
+        "pattern": {
+          "regexp": "^(.*):(\\d+):(\\d+): (warning): (.*)$",
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "severity": 4,
+          "message": 5
+        }
+      },
+      "detail": "只讀參數與中文警告；不執行 Gradle、不連接機器人。"
+    }
+  ]
+}
